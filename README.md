@@ -7,6 +7,6 @@ This course is currently up to date
 ```
 $ cd starter_with_traceur
 $ npm install
-$ bower install
+$ npm install -g bower
 $ grunt
 ```
