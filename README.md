@@ -9,4 +9,6 @@ $ cd starter_with_traceur
 $ npm install
 $ npm install -g bower
 $ npm install -g grunt-cli
+$ npm install jasmine-node --save
+
 ```
