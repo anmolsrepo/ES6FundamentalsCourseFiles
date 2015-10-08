@@ -8,5 +8,5 @@ This course is currently up to date
 $ cd starter_with_traceur
 $ npm install
 $ npm install -g bower
-$ grunt
+$ npm install -g grunt-cli
 ```
