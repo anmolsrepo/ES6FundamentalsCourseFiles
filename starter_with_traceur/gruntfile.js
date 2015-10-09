@@ -1,28 +1,38 @@
 module.exports = function (grunt) {
     "use strict";
 
+    require("load-grunt-tasks")(grunt);
+
     grunt.initConfig({
         express: {
             all: {
                 options: {
                     port: 9000,
                     hostname: "0.0.0.0",
-                    bases: ["app", "bower_components"]
+                    bases: ["app", "bower_components", "node_modules"]
                 }
             }
         },
-         traceur: {
+        "babel": {
             options: {
-                experimental: true
+                sourceMap: true
             },
-            custom: {
-                files: [{
-                    expand: true, 
-                    src: ["app/es6/*.js"],
-                    dest: "app/es5/",
-                    ext: ".js", 
-                    flatten: true
-                }]
+            dist: {
+                files: {                    
+                    "app/es5/mySpec.js": "app/es6/mySpec.js",
+                    "app/es5/variables and parameters - const.js":         "app/es6/variables and parameters - const.js",
+                    "app/es5/variables and parameters - defaults.js":      "app/es6/variables and parameters - defaults.js",                    
+                    "app/es5/variables and parameters - destructuring.js": "app/es6/variables and parameters - destructuring.js",
+                    "app/es5/variables and parameters - let.js":           "app/es6/variables and parameters - let.js",
+                    "app/es5/variables and parameters - rest.js":          "app/es6/variables and parameters - rest.js",
+                    "app/es5/variables and parameters - spread.js":        "app/es6/variables and parameters - spread.js",
+                    "app/es5/variables and parameters - templates.js":     "app/es6/variables and parameters - templates.js",
+                    
+                    "app/es5/classes - arrows.js":         "app/es6/classes - arrows.js",
+                    "app/es5/classes - comprehensions.js": "app/es6/classes - comprehensions.js",
+                    "app/es5/classes - generators.js":     "app/es6/classes - generators.js",
+                    "app/es5/classes - iterators.js":      "app/es6/classes - iterators.js",
+                }
             }
         },
         watch: {
@@ -34,7 +44,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: "app/es6/*.js",
-                tasks: ["traceur"]                
+                tasks: ["babel"]                
             }
         },
         open: {
@@ -44,9 +54,9 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-express");
-    grunt.loadNpmTasks("grunt-open");
-    grunt.loadNpmTasks("grunt-traceur");
-    grunt.registerTask("default", ["traceur", "express", "open", "watch"]);
+    // grunt.loadNpmTasks("grunt-contrib-watch");
+    // grunt.loadNpmTasks("grunt-express");
+    // grunt.loadNpmTasks("grunt-open");
+    // grunt.loadNpmTasks("grunt-babel");
+    grunt.registerTask("default", ["babel", "express", "open", "watch"]);
 };
