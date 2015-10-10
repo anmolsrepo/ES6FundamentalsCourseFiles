@@ -28,8 +28,78 @@ describe("the class keyword", function () {
 		})();
 
 		var e = new Employee();
+
 		expect(e.doWork()).toBe("completed!");
 		expect(e.getName()).toBe("Sophie");
+		expect(Employee.prototype.doWork.call(e)).toBe("completed!");
+	});
+
+	it("can have a constructor", function () {
+		var Employee = (function () {
+			function Employee(name) {
+				_classCallCheck(this, Employee);
+
+				this._name = name;
+			}
+
+			_createClass(Employee, [{
+				key: "doWork",
+				value: function doWork() {
+					return "completed!";
+				}
+			}, {
+				key: "getName",
+				value: function getName() {
+					return this._name;
+				}
+			}]);
+
+			return Employee;
+		})();
+
+		var e1 = new Employee("Sophie");
+		var e2 = new Employee("Alex");
+
+		expect(e1.getName()).toBe("Sophie");
+		expect(e2.getName()).toBe("Alex");
+	});
+
+	it("can have getters and setters", function () {
+		var Employee = (function () {
+			function Employee(name) {
+				_classCallCheck(this, Employee);
+
+				this._name = name;
+			}
+
+			_createClass(Employee, [{
+				key: "doWork",
+				value: function doWork() {
+					return "completed!";
+				}
+			}, {
+				key: "name",
+				get: function get() {
+					return this._name.toUpperCase();
+				},
+				set: function set(newValue) {
+					if (newValue) {
+						this._name = newValue;
+					}
+				}
+			}]);
+
+			return Employee;
+		})();
+
+		var e1 = new Employee("Sophie");
+		var e2 = new Employee("Alex");
+
+		expect(e1.name).toBe("SOPHIE");
+		expect(e2.name).toBe("ALEX");
+
+		e1.name = "Chris";
+		expect(e1.name).toBe("CHRIS");
 	});
 });
 //# sourceMappingURL=classes.js.map
