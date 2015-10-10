@@ -7,20 +7,20 @@ describe("default parameters", function () {
 	it("provides defaults 1 (test pass value)", function () {
 
 		var doWork = function doWork() {
-			var name = arguments.length <= 0 || arguments[0] === undefined ? "Scott" : arguments[0];
+			var name = arguments.length <= 0 || arguments[0] === undefined ? "Sophie" : arguments[0];
 
 			return name;
 		};
 
 		var result = doWork();
 
-		expect(result).toBe("Scott");
+		expect(result).toBe("Sophie");
 	});
 
 	it("provides defaults 2 (test empty string)", function () {
 
 		var doWork = function doWork() {
-			var name = arguments.length <= 0 || arguments[0] === undefined ? "Scott" : arguments[0];
+			var name = arguments.length <= 0 || arguments[0] === undefined ? "Sophie" : arguments[0];
 
 			return name;
 		};
@@ -33,20 +33,20 @@ describe("default parameters", function () {
 	it("provides defaults 3 (test undefined)", function () {
 
 		var doWork = function doWork() {
-			var name = arguments.length <= 0 || arguments[0] === undefined ? "Scott" : arguments[0];
+			var name = arguments.length <= 0 || arguments[0] === undefined ? "Sophie" : arguments[0];
 
 			return name;
 		};
 
 		var result = doWork(undefined);
 
-		expect(result).toBe("Scott");
+		expect(result).toBe("Sophie");
 	});
 
 	it("provides defaults 4 (test null value)", function () {
 
 		var doWork = function doWork() {
-			var name = arguments.length <= 0 || arguments[0] === undefined ? "Scott" : arguments[0];
+			var name = arguments.length <= 0 || arguments[0] === undefined ? "Sophie" : arguments[0];
 
 			return name;
 		};
@@ -87,7 +87,7 @@ describe("default parameters", function () {
 
 		var doWork = function doWork(url, _ref) {
 			var _ref$data = _ref.data;
-			var data = _ref$data === undefined ? "Scott" : _ref$data;
+			var data = _ref$data === undefined ? "Sophie" : _ref$data;
 			var _ref$cache = _ref.cache;
 			var cache = _ref$cache === undefined ? true : _ref$cache;
 
@@ -98,7 +98,7 @@ describe("default parameters", function () {
 			cache: false
 		});
 
-		expect(result).toBe("Scott");
+		expect(result).toBe("Sophie");
 	});
 });
 //# sourceMappingURL=defaults.js.map

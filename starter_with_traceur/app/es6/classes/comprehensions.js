@@ -16,11 +16,11 @@ describe("comprehensions", function() {
 		}
 		expect(numbers).toEqual([1, 4, 9]);
 
-		let numbers = [for (n of [1,2,3]) if(n > 1) n * n];
-		expect(numbers).toEqual([4,9]);
+		//let numbers = [for (n of [1,2,3]) if(n > 1) n * n];
+		//expect(numbers).toEqual([4,9]);
 
-		let numbers2 = (for (n of [1,2,3]) n * n);
-		expect(Array.from(numbers2)).toEqual([1,4,9]);
+		//let numbers2 = (for (n of [1,2,3]) n * n);
+		//expect(Array.from(numbers2)).toEqual([1,4,9]);
 
 	});
 
@@ -43,7 +43,7 @@ describe("comprehensions", function() {
 		}
 
 		let filter = function*(items, predicate) {			
-			yield* (for (item of items) if(predicate(item)) item);
+			//yield* (for (item of items) if(predicate(item)) item);
 			// for(let item of items) {
 			// 	if(predicate(item)) {
 			// 		yield item;

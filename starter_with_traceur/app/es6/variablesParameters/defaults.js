@@ -2,19 +2,19 @@ describe("default parameters", function(){
 
 	it("provides defaults 1 (test pass value)", function(){
 
-		var doWork = function(name="Scott") {						
+		var doWork = function(name="Sophie") {						
 			return name;
 		};
 
 		var result = doWork();
 
-		expect(result).toBe("Scott");
+		expect(result).toBe("Sophie");
 
 	});
 
 	it("provides defaults 2 (test empty string)", function(){
 
-		var doWork = function(name="Scott") {						
+		var doWork = function(name="Sophie") {						
 			return name;
 		};
 
@@ -26,19 +26,19 @@ describe("default parameters", function(){
 	
 	it("provides defaults 3 (test undefined)", function(){
 
-		var doWork = function(name="Scott") {						
+		var doWork = function(name="Sophie") {
 			return name;
 		};
 
 		var result = doWork(undefined);
 
-		expect(result).toBe("Scott");
+		expect(result).toBe("Sophie");
 
 	});
 	
 	it("provides defaults 4 (test null value)", function(){
 
-		var doWork = function(name="Scott") {						
+		var doWork = function(name="Sophie") {						
 			return name;
 		};
 
@@ -66,7 +66,7 @@ describe("default parameters", function(){
 
 		let doWork = function(
 			     url, 
-				{data = "Scott", cache = true}){
+				{data = "Sophie", cache = true}){
 			return data;
 		};
 
@@ -76,7 +76,7 @@ describe("default parameters", function(){
 				}
 			);
 		
-		expect(result).toBe("Scott");
+		expect(result).toBe("Sophie");
 
 	});
 

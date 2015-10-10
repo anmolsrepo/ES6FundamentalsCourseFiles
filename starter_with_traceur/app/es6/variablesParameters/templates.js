@@ -6,8 +6,8 @@ describe("template literals", function(){
 			return `Hello, ${name}`;
 		};
 
-		let result = doWork("Scott");
-		expect(result).toBe("Hello, Scott");
+		let result = doWork("Sophie");
+		expect(result).toBe("Hello, Sophie");
 
 	});
 

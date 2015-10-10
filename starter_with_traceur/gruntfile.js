@@ -19,19 +19,19 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {                    
-                    "app/es5/mySpec.js": "app/es6/mySpec.js",
-                    "app/es5/variables and parameters - const.js":         "app/es6/variables and parameters - const.js",
-                    "app/es5/variables and parameters - defaults.js":      "app/es6/variables and parameters - defaults.js",                    
-                    "app/es5/variables and parameters - destructuring.js": "app/es6/variables and parameters - destructuring.js",
-                    "app/es5/variables and parameters - let.js":           "app/es6/variables and parameters - let.js",
-                    "app/es5/variables and parameters - rest.js":          "app/es6/variables and parameters - rest.js",
-                    "app/es5/variables and parameters - spread.js":        "app/es6/variables and parameters - spread.js",
-                    "app/es5/variables and parameters - templates.js":     "app/es6/variables and parameters - templates.js",
-                    
-                    "app/es5/classes - arrows.js":         "app/es6/classes - arrows.js",
-                    "app/es5/classes - comprehensions.js": "app/es6/classes - comprehensions.js",
-                    "app/es5/classes - generators.js":     "app/es6/classes - generators.js",
-                    "app/es5/classes - iterators.js":      "app/es6/classes - iterators.js",
+                    "app/es5/mySpec.js":                            "app/es6/mySpec.js",
+                    "app/es5/variablesParameters/const.js":         "app/es6/variablesParameters/const.js",
+                    "app/es5/variablesParameters/defaults.js":      "app/es6/variablesParameters/defaults.js",                    
+                    "app/es5/variablesParameters/destructuring.js": "app/es6/variablesParameters/destructuring.js",
+                    "app/es5/variablesParameters/let.js":           "app/es6/variablesParameters/let.js",
+                    "app/es5/variablesParameters/rest.js":          "app/es6/variablesParameters/rest.js",
+                    "app/es5/variablesParameters/spread.js":        "app/es6/variablesParameters/spread.js",
+                    "app/es5/variablesParameters/templates.js":     "app/es6/variablesParameters/templates.js",
+                    "app/es5/classes/classes.js":        "app/es6/classes/classes.js",
+                    "app/es5/classes/arrows.js":         "app/es6/classes/arrows.js",
+                    "app/es5/classes/comprehensions.js": "app/es6/classes/comprehensions.js",
+                    "app/es5/classes/generators.js":     "app/es6/classes/generators.js",
+                    "app/es5/classes/iterators.js":      "app/es6/classes/iterators.js",
                 }
             }
         },

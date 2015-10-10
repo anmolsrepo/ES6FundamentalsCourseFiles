@@ -17,7 +17,7 @@ describe("rest parameters", function () {
 			return result;
 		};
 
-		var result = doWork("Scott", 1, 2, 3);
+		var result = doWork("Sophie", 1, 2, 3);
 		expect(result).toBe(6);
 	});
 
@@ -36,7 +36,7 @@ describe("rest parameters", function () {
 			return result;
 		};
 
-		var result = doWork("Scott");
+		var result = doWork("Sophie");
 		expect(result).toBe(0);
 	});
 });

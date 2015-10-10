@@ -6,7 +6,7 @@ describe("using const", function () {
 
 		var MAX_SIZE = 10;
 
-		//MAX_SIZE = 12; //sYNTAXeRROR
+		//MAX_SIZE = 12; //SyntaxError
 
 		expect(MAX_SIZE).toBe(10);
 	});

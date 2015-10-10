@@ -96,8 +96,8 @@ describe("destructuring", function () {
 
 		var doWork = function doWork() {
 			return {
-				firstName: "Scott",
-				lastName: "Allen",
+				firstName: "Sophie",
+				lastName: "Jiang",
 				twitter: "OdeToCode"
 			};
 		};
@@ -107,7 +107,7 @@ describe("destructuring", function () {
 		var first = _doWork5.firstName;
 		var twitter = _doWork5.twitter;
 
-		expect(first).toBe("Scott");
+		expect(first).toBe("Sophie");
 		expect(twitter).toBe("OdeToCode");
 	});
 
@@ -115,8 +115,8 @@ describe("destructuring", function () {
 
 		var doWork = function doWork() {
 			return {
-				firstName: "Scott",
-				lastName: "Allen",
+				firstName: "Sophie",
+				lastName: "Jiang",
 				handles: {
 					twitter: "OdeToCode"
 				}
@@ -128,7 +128,7 @@ describe("destructuring", function () {
 		var first = _doWork6.firstName;
 		var twitter = _doWork6.handles.twitter;
 
-		expect(first).toBe("Scott");
+		expect(first).toBe("Sophie");
 		expect(twitter).toBe("OdeToCode");
 	});
 
@@ -136,8 +136,8 @@ describe("destructuring", function () {
 
 		var doWork = function doWork() {
 			return {
-				firstName: "Scott",
-				lastName: "Allen",
+				firstName: "Sophie",
+				lastName: "Jiang",
 				handles: {
 					twitter: "OdeToCode"
 				}
@@ -149,7 +149,7 @@ describe("destructuring", function () {
 		var firstName = _doWork7.firstName;
 		var twitter = _doWork7.handles.twitter;
 
-		expect(firstName).toBe("Scott");
+		expect(firstName).toBe("Sophie");
 		expect(twitter).toBe("OdeToCode");
 	});
 

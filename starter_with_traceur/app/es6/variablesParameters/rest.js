@@ -10,7 +10,7 @@ describe("rest parameters", function(){
 			return result;
 		};
 
-		let result = doWork("Scott", 1, 2, 3);
+		let result = doWork("Sophie", 1, 2, 3);
 		expect(result).toBe(6);
 
 	});
@@ -25,7 +25,7 @@ describe("rest parameters", function(){
 			return result;
 		};
 
-		let result = doWork("Scott");
+		let result = doWork("Sophie");
 		expect(result).toBe(0);
 
 	});

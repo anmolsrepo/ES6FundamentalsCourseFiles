@@ -12,8 +12,8 @@ describe("template literals", function () {
 			return "Hello, " + name;
 		};
 
-		var result = doWork("Scott");
-		expect(result).toBe("Hello, Scott");
+		var result = doWork("Sophie");
+		expect(result).toBe("Hello, Sophie");
 	});
 
 	it("can help build URLs", function () {
