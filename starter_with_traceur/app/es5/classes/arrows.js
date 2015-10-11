@@ -2,7 +2,19 @@
 
 describe("arrow functions", function () {
 
-	it("provide a compact syntax to define a function", function () {
+	it("provide a compact syntax to define a function 1", function () {
+
+		var add = function add(x, y) {
+			return x + y;
+		};
+		var square = function square(x) {
+			return x * x;
+		};
+
+		expect(square(add(2, 3))).toBe(25);
+	});
+
+	it("provide a compact syntax to define a function 2", function () {
 
 		var add = function add(x, y) {
 			var temp = x + y;
@@ -34,14 +46,33 @@ describe("arrow functions", function () {
 		expect(doubled).toEqual([2, 4, 6, 8]);
 	});
 
-	it("lexically binds to 'this'", function (done) {
+	//it("lexically binds to 'this' 1 - ************** NOT WORKING *************", function(done) {
+
+	//this.name = "Scott";
+
+	//expect(this.name).toBe("Scott");
+
+	//});
+
+	it("lexically binds to 'this' 2 (Asynch)", function (done) {
+
+		var self = this;
+		self.name = "Scott";
+
+		setTimeout(function () {
+			expect(self.name).toBe("Scott");
+			done(); //tell jasmine when the code is finished
+		}, 15);
+	});
+
+	it("lexically binds to 'this' 3 (Asynch)", function (done) {
 		var _this = this;
 
 		this.name = "Scott";
 
 		setTimeout(function () {
 			expect(_this.name).toBe("Scott");
-			done();
+			done(); //tell jasmine when the code is finished
 		}, 15);
 	});
 });
