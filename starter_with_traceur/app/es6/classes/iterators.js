@@ -1,6 +1,6 @@
 describe("iterables", function(){
 
-	it("can work with iterators at a low level", function(){
+	it("can work with iterators at a low level - while(!next.done)", function(){
 
 		let sum = 0;
 		let numbers = [1,2,3,4];
@@ -12,7 +12,7 @@ describe("iterables", function(){
 		}
 		expect(sum).toBe(10);
 
-		// for in
+		// for in (i is index)
 		sum = 0;
 		for(let i in numbers) {
 			sum += numbers[i];
@@ -22,7 +22,9 @@ describe("iterables", function(){
 		// iterator
 		sum = 0;
 
-		let iterator = numbers[Symbol.iterator]();
+		let iterator = numbers.values();
+		// or use
+		//let iterator = numbers[Symbol.iterator]();
 		let next = iterator.next();
 		while(!next.done){
 			sum += next.value;
@@ -35,7 +37,7 @@ describe("iterables", function(){
 
 describe("for of", function() {
 
-	it("can work with iteratables at a high level", function(){
+	it("can work with iteratables at a high level - for(let n of numbers)", function(){
 
 		let sum = 0;
 		let numbers = [1,2,3,4];

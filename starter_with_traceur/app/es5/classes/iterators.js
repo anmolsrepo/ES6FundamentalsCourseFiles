@@ -6,7 +6,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 describe("iterables", function () {
 
-	it("can work with iterators at a low level", function () {
+	it("can work with iterators at a low level - while(!next.done)", function () {
 
 		var sum = 0;
 		var numbers = [1, 2, 3, 4];
@@ -40,7 +40,7 @@ describe("iterables", function () {
 
 describe("for of", function () {
 
-	it("can work with iteratables at a high level", function () {
+	it("can work with iteratables at a high level - for(let n of numbers)", function () {
 
 		var sum = 0;
 		var numbers = [1, 2, 3, 4];
